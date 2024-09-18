@@ -10,7 +10,6 @@ vim.cmd("set expandtab")
 vim.cmd("set smartindent")
 vim.cmd("set colorcolumn=80")
 
-vim.cmd("set scrolloff=6")
 vim.cmd("set wrap!")
 vim.cmd("set belloff=all")
 
