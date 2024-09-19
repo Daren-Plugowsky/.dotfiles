@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Created by: Mr Coxall
-# Created on: Sept 2020
+# Created by: Daren Plugowsky 
+# Created on: Sept 19 2024
 # AWS Debian Linux dotfiles and setup script
 
 sudo apt update
@@ -27,3 +27,16 @@ curl -fsSL https://bun.sh/install | bash
 # shellcheck source=/dev/null
 source ~/.bashrc
 sudo apt install -y default-jdk
+
+# NV Chad Installation
+
+mkdir ~/backup_nvim
+cp -r ~/.config/nvim ~/backup_nvim
+cp -r ~/.local/share/nvim ~/backup_nvim
+cp -r ~/.cache/nvim ~/backup_nvim
+
+rm -rf ~/.config/nvim
+rm -rf ~/.local/share/nvim
+rm -rf ~/.cache/nvim
+
+git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
